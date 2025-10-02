@@ -92,11 +92,11 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStart }) => {
               <div className="relative">
                 <input
                   type="number"
-                  min="0"
+                  min="1"
                   max={countriesData.length}
                   value={questionCount}
                   onChange={(e) =>
-                    setQuestionCount(parseInt(e.target.value) || 1)
+                    setQuestionCount(parseInt(e.target.value))
                   }
                   className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300 text-lg font-medium"
                 />
