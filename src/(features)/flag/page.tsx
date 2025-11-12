@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { countriesData } from "./data/countriesData";
 import scoreData from "./data/scoreData";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 // Mock flag data
 
@@ -72,9 +72,9 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStart }) => {
 
         <div className="relative z-10">
           <div className="text-center mb-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl">
-              <span className="text-3xl">✨</span>
-            </div>
+            <Link to="/" title="Back Games" className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl">
+              <span className="text-3xl"> <ArrowLeft color="white" /> </span>
+            </Link>
             <h2 className="text-3xl font-bold text-white mb-3 tracking-tight">
               Welcome to Elite Quiz
             </h2>
@@ -437,8 +437,6 @@ const FlagPage: React.FC = () => {
       <AnimatedBackground />
       <FloatingParticles />
 
-      <Header />
-
       {gameState === "setup" && <SetupScreen onStart={startQuiz} />}
 
       {gameState === "playing" && questions.length > 0 && (
@@ -459,8 +457,6 @@ const FlagPage: React.FC = () => {
           onRestart={restartQuiz}
         />
       )}
-
-      <Footer />
     </div>
   );
 };
