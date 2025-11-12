@@ -245,7 +245,7 @@ export const celebritiesDate: Celebrity[] = [
     month: 2,
     day: 4,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Rosaparks.jpg/500px-Rosaparks.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rosa_Parks_1955_2_%28cropped%29.jpg/500px-Rosa_Parks_1955_2_%28cropped%29.jpg",
     bio: "American activist in the civil rights movement best known for her pivotal role in the Montgomery bus boycott. The United States Congress has called her 'the first lady of civil rights' and 'the mother of the freedom movement.'",
     achievement: "Civil Rights Pioneer",
   },
@@ -1505,7 +1505,7 @@ export const celebritiesDate: Celebrity[] = [
     month: 2,
     day: 28,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Luka_Don%C4%8Di%C4%87_2021_%28cropped%29.jpg/500px-Luka_Don%C4%8Di%C4%87_2021_%28cropped%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Luka_Doncic_%2851914951721%29_%28cropped1%29.jpg/500px-Luka_Doncic_%2851914951721%29_%28cropped1%29.jpg",
     bio: "Slovenian professional basketball player for the Dallas Mavericks. He was the 2018 EuroLeague MVP and the 2019 NBA Rookie of the Year. He is a four-time NBA All-Star and has been named to the All-NBA First Team four times.",
     achievement: "NBA All-Star",
   },
@@ -2127,7 +2127,7 @@ export const celebritiesDate: Celebrity[] = [
     month: 2,
     day: 9,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Michael_B._Jordan_2018.jpg/500px-Michael_B._Jordan_2018.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg/500px-2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg",
     bio: "American actor and producer. He is known for his film roles including shooting victim Oscar Grant in Fruitvale Station, boxer Adonis Creed in Creed, and Erik Killmonger in Black Panther. He has received several accolades and nominations.",
     achievement: "NAACP Image Award Winner",
   },
