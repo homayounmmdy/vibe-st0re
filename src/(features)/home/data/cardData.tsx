@@ -7,6 +7,6 @@ export const cardData = [
  {
     title : "star date",
     href : "/games/star-date",
-    imageURL : "images/flag-game.png"
+    imageURL : "images/starDate-game.png"
  },
 ]

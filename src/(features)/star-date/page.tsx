@@ -166,7 +166,7 @@ export default function StarDate() {
                       <option value="">All Months</option>
                       {monthNames.map((m, i) => (
                         <option key={m} value={i + 1}>
-                          {m} {celebrityStats[i + 1] ? (`${celebrityStats[i + 1]}`) : ''}
+                          {m} {celebrityStats[i + 1] ? (`(${celebrityStats[i + 1]} in this month)`) : ''}
                         </option>
                       ))}
                     </select>
