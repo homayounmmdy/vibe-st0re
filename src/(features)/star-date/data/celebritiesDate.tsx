@@ -224,5 +224,221 @@ export const celebritiesDate: Celebrity[] = [
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Rosaparks.jpg/500px-Rosaparks.jpg",
     bio: "American activist in the civil rights movement best known for her pivotal role in the Montgomery bus boycott. The United States Congress has called her 'the first lady of civil rights' and 'the mother of the freedom movement.'",
     achievement: "Civil Rights Pioneer"
+  },
+  {
+    id: 25,
+    name: "Michelle Obama",
+    month: 1,
+    day: 17,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Michelle_Obama_2013_official_portrait.jpg/500px-Michelle_Obama_2013_official_portrait.jpg",
+    bio: "American attorney and author who served as first lady of the United States from 2009 to 2017. She was the first African-American first lady and founded the Let's Move! initiative to combat childhood obesity.",
+    achievement: "Former First Lady & Advocate"
+  },
+  {
+    id: 26,
+    name: "David Attenborough",
+    month: 5,
+    day: 8,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/David_Attenborough_2015.jpg/500px-David_Attenborough_2015.jpg",
+    bio: "English broadcaster, biologist, natural historian and author. Best known for writing and presenting the BBC's Life series, which collectively form a comprehensive survey of animal and plant life on Earth.",
+    achievement: "Renowned Natural Historian"
+  },
+  {
+    id: 27,
+    name: "Amelia Earhart",
+    month: 7,
+    day: 24,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amelia_Earhart_1937.png/500px-Amelia_Earhart_1937.png",
+    bio: "American aviation pioneer and writer. She was the first female aviator to fly solo across the Atlantic Ocean and set many other records. She disappeared in 1937 while attempting to circumnavigate the globe.",
+    achievement: "Aviation Pioneer"
+  },
+  {
+    id: 28,
+    name: "Vincent van Gogh",
+    month: 3,
+    day: 30,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg/500px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+    bio: "Dutch post-impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created approximately 2,100 artworks, including around 860 oil paintings.",
+    achievement: "Post-Impressionist Master"
+  },
+  {
+    id: 29,
+    name: "Muhammad Ali",
+    month: 1,
+    day: 17,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/500px-Muhammad_Ali_NYWTS.jpg",
+    bio: "American professional boxer, activist, and philanthropist. Nicknamed 'The Greatest', he is regarded as one of the most significant sports figures of the 20th century and one of the greatest boxers of all time.",
+    achievement: "Boxing Legend & Activist"
+  },
+  {
+    id: 30,
+    name: "J.K. Rowling",
+    month: 7,
+    day: 31,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/500px-J._K._Rowling_2010.jpg",
+    bio: "British author and philanthropist best known for writing the Harry Potter fantasy series. The books have won multiple awards and sold more than 500 million copies, becoming the best-selling book series in history.",
+    achievement: "Harry Potter Author"
+  },
+  {
+    id: 31,
+    name: "Walt Disney",
+    month: 12,
+    day: 5,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Walt_Disney_1946.JPG/500px-Walt_Disney_1946.JPG",
+    bio: "American animator, film producer and entrepreneur. A pioneer of the American animation industry, he introduced several developments in the production of cartoons and created Disneyland, the world's first theme park.",
+    achievement: "Animation Pioneer"
+  },
+  {
+    id: 32,
+    name: "Mother Teresa",
+    month: 8,
+    day: 26,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mother_Teresa_1.jpg/500px-Mother_Teresa_1.jpg",
+    bio: "Albanian-Indian Catholic nun and missionary who founded the Missionaries of Charity. She spent many years in Kolkata where she ministered to the poor, sick, orphaned, and dying.",
+    achievement: "Nobel Peace Prize 1979"
+  },
+  {
+    id: 33,
+    name: "Mark Zuckerberg",
+    month: 5,
+    day: 14,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/500px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+    bio: "American business magnate, internet entrepreneur, and philanthropist. He co-founded Facebook, now Meta Platforms, and serves as its chairman, chief executive officer, and controlling shareholder.",
+    achievement: "Facebook Co-founder"
+  },
+  {
+    id: 34,
+    name: "Princess Diana",
+    month: 7,
+    day: 1,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Diana_1997_%28cropped%29.jpg/500px-Diana_1997_%28cropped%29.jpg",
+    bio: "British member of the royal family who was the first wife of King Charles III. She was known for her charity work and campaigns against landmines, as well as her support for numerous humanitarian causes.",
+    achievement: "Humanitarian & Royal"
+  },
+  {
+    id: 35,
+    name: "Nikola Tesla",
+    month: 7,
+    day: 10,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/N.Tesla.JPG/500px-N.Tesla.JPG",
+    bio: "Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current electricity supply system.",
+    achievement: "Electrical Engineering Pioneer"
+  },
+  {
+    id: 36,
+    name: "Audrey Hepburn",
+    month: 5,
+    day: 4,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Audrey_Hepburn_1956.jpg/500px-Audrey_Hepburn_1956.jpg",
+    bio: "British actress and humanitarian. Recognized as both a film and fashion icon, she was ranked by the American Film Institute as the third-greatest female screen legend from the Classical Hollywood cinema.",
+    achievement: "Actress & Humanitarian"
+  },
+  {
+    id: 37,
+    name: "Bill Gates",
+    month: 10,
+    day: 28,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bill_Gates_2018.jpg/500px-Bill_Gates_2018.jpg",
+    bio: "American business magnate, software developer, investor, author, and philanthropist. He co-founded Microsoft Corporation and is known for his extensive philanthropic work through the Bill & Melinda Gates Foundation.",
+    achievement: "Microsoft Co-founder"
+  },
+  {
+    id: 38,
+    name: "Freddie Mercury",
+    month: 9,
+    day: 5,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg/500px-Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg",
+    bio: "British singer, songwriter, and lead vocalist of the rock band Queen. Known for his flamboyant stage persona and four-octave vocal range, he is regarded as one of the greatest singers in the history of rock music.",
+    achievement: "Queen Frontman"
+  },
+  {
+    id: 39,
+    name: "Ruth Bader Ginsburg",
+    month: 3,
+    day: 15,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ruth_Bader_Ginsburg_2016_portrait.jpg/500px-Ruth_Bader_Ginsburg_2016_portrait.jpg",
+    bio: "American lawyer and jurist who served as an associate justice of the Supreme Court of the United States from 1993 until her death in 2020. She was the second woman to serve on the Supreme Court.",
+    achievement: "Supreme Court Justice"
+  },
+  {
+    id: 40,
+    name: "Usain Bolt",
+    month: 8,
+    day: 21,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Usain_Bolt_after_4_x_100_m_relay_final_Rio_2016.jpg/500px-Usain_Bolt_after_4_x_100_m_relay_final_Rio_2016.jpg",
+    bio: "Jamaican retired sprinter, widely considered to be the greatest sprinter of all time. He is the world record holder in the 100 metres, 200 metres, and 4 × 100 metres relay.",
+    achievement: "World's Fastest Man"
+  },
+  {
+    id: 41,
+    name: "Anne Frank",
+    month: 6,
+    day: 12,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anne_Frank_%28school_photo%2C_crop%29.jpg/500px-Anne_Frank_%28school_photo%2C_crop%29.jpg",
+    bio: "German-Dutch diarist of Jewish heritage. One of the most discussed Jewish victims of the Holocaust, she gained fame posthumously with the publication of The Diary of a Young Girl documenting her life in hiding.",
+    achievement: "Diarist & Holocaust Victim"
+  },
+  {
+    id: 42,
+    name: "Roger Federer",
+    month: 8,
+    day: 8,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Roger_Federer_2012_Indian_Wells.jpg/500px-Roger_Federer_2012_Indian_Wells.jpg",
+    bio: "Swiss former professional tennis player. Federer was ranked world No. 1 by the Association of Tennis Professionals for 310 weeks, including a record 237 consecutive weeks, and won 20 Grand Slam men's singles titles.",
+    achievement: "20-Time Grand Slam Champion"
+  },
+  {
+    id: 43,
+    name: "Catherine the Great",
+    month: 5,
+    day: 2,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vigilius_Eriksen_-_Portrait_of_Catherine_II_in_her_coronation_robes_-_Google_Art_Project.jpg/500px-Vigilius_Eriksen_-_Portrait_of_Catherine_II_in_her_coronation_robes_-_Google_Art_Project.jpg",
+    bio: "Empress of Russia from 1762 until 1796, the country's longest-ruling female leader. She came to power following a coup d'état that overthrew her husband, Peter III, and greatly expanded Russian territory.",
+    achievement: "Longest-ruling Female Russian Leader"
+  },
+  {
+    id: 44,
+    name: "Bob Marley",
+    month: 2,
+    day: 6,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Bob-Marley.jpg/500px-Bob-Marley.jpg",
+    bio: "Jamaican singer, musician, and songwriter. Considered one of the pioneers of reggae, his musical career was marked by fusing elements of reggae, ska, and rocksteady, as well as his distinctive vocal and songwriting style.",
+    achievement: "Reggae Legend"
+  },
+  {
+    id: 45,
+    name: "Indira Gandhi",
+    month: 11,
+    day: 19,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Indira_Gandhi_1967.jpg/500px-Indira_Gandhi_1967.jpg",
+    bio: "Indian politician and stateswoman who served as the third prime minister of India from 1966 to 1977 and again from 1980 until her assassination in 1984. She was India's first and only female prime minister.",
+    achievement: "First Female Prime Minister of India"
+  },
+  {
+    id: 46,
+    name: "Stephen King",
+    month: 9,
+    day: 21,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Stephen_King_2011.jpg/500px-Stephen_King_2011.jpg",
+    bio: "American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels. Described as the 'King of Horror', his books have sold more than 350 million copies.",
+    achievement: "Bestselling Author"
+  },
+  {
+    id: 47,
+    name: "Meryl Streep",
+    month: 6,
+    day: 22,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Meryl_Streep_December_2018.jpg/500px-Meryl_Streep_December_2018.jpg",
+    bio: "American actress. Often described as 'the best actress of her generation', Streep is particularly known for her versatility and accent adaptation. She has received numerous accolades throughout her career.",
+    achievement: "Academy Award-Winning Actress"
+  },
+  {
+    id: 48,
+    name: "Winston Churchill",
+    month: 11,
+    day: 30,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/500px-Sir_Winston_Churchill_-_19086236948.jpg",
+    bio: "British statesman, soldier, and writer who served as Prime Minister of the United Kingdom from 1940 to 1945 and again from 1951 to 1955. He led Britain to victory in the Second World War.",
+    achievement: "Wartime Prime Minister"
   }
 ];
