@@ -1,10 +1,6 @@
 import { Calendar, Filter, Search, Sparkles, Star, Users, X } from "lucide-react";
-import React, { useMemo, useState } from "react";
+import  { useMemo, useState } from "react";
 import { celebritiesDate, type Celebrity } from "./data/celebritiesDate";
-
-
-
-
 
 const zodiacSigns = [
   { name: "Capricorn", start: [12, 22], end: [1, 19], emoji: "♑" },
