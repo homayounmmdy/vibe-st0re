@@ -1,138 +1,10 @@
 import { Calendar, Sparkles, Star } from "lucide-react";
 import React, { useState } from "react";
+import { celebritiesDate, type Celebrity } from "./data/celebritiesDate";
 
-interface Celebrity {
-  id: number;
-  name: string;
-  month: number;
-  day: number;
-  image: string;
-  bio: string;
-  achievement: string;
-}
 
-const celebrities: Celebrity[] = [
-  {
-    id: 1,
-    name: "Albert Einstein",
-    month: 3,
-    day: 14,
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    bio: "Theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is known for its influence on the philosophy of science and he received the Nobel Prize in Physics in 1921.",
-    achievement: "Father of Modern Physics",
-  },
-  {
-    id: 2,
-    name: "Leonardo DiCaprio",
-    month: 11,
-    day: 11,
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    bio: "Award-winning actor and environmental activist known for his transformative roles in films like Titanic, Inception, and The Revenant. He's also a prominent advocate for environmental causes through his foundation.",
-    achievement: "Academy Award Winner",
-  },
-  {
-    id: 3,
-    name: "Oprah Winfrey",
-    month: 1,
-    day: 29,
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    bio: "Media executive, actress, talk show host, and philanthropist. Best known for her talk show, which was the highest-rated television program of its kind in history and ran for 25 years.",
-    achievement: "Media Mogul & Philanthropist",
-  },
-  {
-    id: 4,
-    name: "Taylor Swift",
-    month: 12,
-    day: 13,
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    bio: "Singer-songwriter known for narrative songs about her personal life. She has received numerous awards including 12 Grammy Awards and is one of the best-selling music artists of all time.",
-    achievement: "Multi-Grammy Award Winner",
-  },
-  {
-    id: 5,
-    name: "Stephen Hawking",
-    month: 1,
-    day: 8,
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    bio: "Theoretical physicist, cosmologist, and author who was director of research at the Centre for Theoretical Cosmology at Cambridge. His work on black holes and relativity revolutionized our understanding of the universe.",
-    achievement: "Renowned Cosmologist",
-  },
-  {
-    id: 6,
-    name: "Beyoncé",
-    month: 9,
-    day: 4,
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
-    bio: "Singer, songwriter, and actress who rose to fame as lead singer of Destiny's Child. She has won 32 Grammy Awards and is known for her powerful vocals, elaborate performances, and cultural impact.",
-    achievement: "Most Grammy-Awarded Singer",
-  },
-  {
-    id: 7,
-    name: "Elon Musk",
-    month: 6,
-    day: 28,
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    bio: "Entrepreneur and business magnate, founder of SpaceX and CEO of Tesla. He has revolutionized multiple industries including electric vehicles, space exploration, and sustainable energy solutions.",
-    achievement: "Tech Visionary & Innovator",
-  },
-  {
-    id: 8,
-    name: "Marie Curie",
-    month: 11,
-    day: 7,
-    image:
-      "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop",
-    bio: "Physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize and remains the only person to win Nobel Prizes in two different sciences.",
-    achievement: "Two-Time Nobel Laureate",
-  },
-  {
-    id: 9,
-    name: "Nelson Mandela",
-    month: 7,
-    day: 18,
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    bio: "Anti-apartheid revolutionary and political leader who served as President of South Africa. He was a global advocate for human rights and received the Nobel Peace Prize in 1993.",
-    achievement: "Nobel Peace Prize Winner",
-  },
-  {
-    id: 10,
-    name: "Steve Jobs",
-    month: 2,
-    day: 24,
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    bio: "Co-founder of Apple Inc. and pioneering entrepreneur who revolutionized personal computing, animated films, music, phones, and digital publishing. His vision transformed multiple industries.",
-    achievement: "Technology Revolutionary",
-  },
-  {
-    id: 11,
-    name: "Serena Williams",
-    month: 9,
-    day: 26,
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop",
-    bio: "Professional tennis player widely regarded as one of the greatest athletes of all time. She has won 23 Grand Slam singles titles and has dominated women's tennis for over two decades.",
-    achievement: "23-Time Grand Slam Champion",
-  },
-  {
-    id: 12,
-    name: "William Shakespeare",
-    month: 4,
-    day: 23,
-    image:
-      "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop",
-    bio: "English playwright, poet, and actor, widely regarded as the greatest writer in the English language. His works have been translated into every major language and are performed more often than those of any other playwright.",
-    achievement: "Literary Legend",
-  },
-];
+
+
 
 const zodiacSigns = [
   { name: "Capricorn", start: [12, 22], end: [1, 19], emoji: "♑" },
@@ -175,7 +47,7 @@ export default function StarDate() {
     const d = parseInt(day);
 
     if (m && d) {
-      const found = celebrities.filter((c) => c.month === m && c.day === d);
+      const found = celebritiesDate.filter((c) => c.month === m && c.day === d);
       setMatches(found);
       setSearched(true);
       setZodiac(getZodiacSign(m, d));
