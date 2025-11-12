@@ -155,7 +155,7 @@ export const celebritiesDate: Celebrity[] = [
     month: 2,
     day: 17,
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Michael_Jordan_in_2014.jpg/500px-Michael_Jordan_in_2014.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Michael_Jordan_in_2014.jpg/375px-Michael_Jordan_in_2014.jpg",
     bio: "Former professional basketball player and businessman. Widely considered the greatest basketball player of all time, he won six NBA championships with the Chicago Bulls and revolutionized the sport globally.",
     achievement: "6-Time NBA Champion",
   },
@@ -2917,8 +2917,7 @@ export const celebritiesDate: Celebrity[] = [
     name: "Nicola Coughlan",
     month: 1,
     day: 9,
-    image:
-      "/images/Unknown.jpg",
+    image: "/images/Unknown.jpg",
     bio: "Irish actress. She is best known for her role as Clare Devlin in the Channel 4 sitcom Derry Girls and as Penelope Featherington in the Netflix series Bridgerton. She began her career in theater before transitioning to television.",
     achievement: "Irish Film & Television Award Winner",
   },
@@ -3895,5 +3894,35 @@ export const celebritiesDate: Celebrity[] = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Brian_Acton_2013_%28cropped%29.jpg/500px-Brian_Acton_2013_%28cropped%29.jpg",
     bio: "American computer programmer and Internet entrepreneur. He is the co-founder of WhatsApp, a mobile messaging application which was acquired by Facebook in 2014 for US$19 billion.",
     achievement: "Co-founder of WhatsApp",
+  },
+  {
+    id: 391,
+    name: "Amber Riley",
+    month: 2,
+    day: 15,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Amber_Riley_2.jpg/500px-Amber_Riley_2.jpg",
+    bio: "American actress and singer who rose to fame for her role as Mercedes Jones on the Fox musical comedy series 'Glee', for which she won a Primetime Emmy Award.",
+    achievement: "Primetime Emmy Award Winner for 'Glee'",
+  },
+  {
+    id: 392,
+    name: "Megan Thee Stallion",
+    month: 2,
+    day: 15,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Megan_Thee_Stallion_%2852058688359%29_%28cropped%29.jpg/500px-Megan_Thee_Stallion_%2852058688359%29_%28cropped%29.jpg",
+    bio: "American rapper, singer, and songwriter. She rose to prominence with her freestyle videos on social media and has since won multiple Grammy Awards, including Best New Artist.",
+    achievement: "Grammy Award-Winning Rapper",
+  },
+  {
+    id: 393,
+    name: "Zachary Gordon",
+    month: 2,
+    day: 15,
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/43/ZACHARY_GORDON_HEADSHOT_%28cropped%29.jpg",
+    bio: "American actor best known for his role as Greg Heffley in the first three films of the 'Diary of a Wimpy Kid' movie series.",
+    achievement: "Star of the 'Diary of a Wimpy Kid' Film Series",
   },
 ];
