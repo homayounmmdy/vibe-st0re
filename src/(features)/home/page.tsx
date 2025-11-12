@@ -5,7 +5,7 @@ import { cardData } from "./data/cardData";
 const HomePage = () => {
   return (
     <Container>
-      <Grid columns={{ initial: "2", md: "3", lg: "4", xl: "5" }} className="mt-2">
+      <Grid columns={{ initial: "2", md: "3", lg: "4", xl: "5" }} gap="5" className="mt-2">
         {cardData.map((card) => (
           <CardImage card={card} key={card.title} />
         ))}
