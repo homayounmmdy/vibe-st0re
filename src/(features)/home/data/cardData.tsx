@@ -9,4 +9,9 @@ export const cardData = [
     href : "/games/star-date",
     imageURL : "images/starDate-game.png"
  },
+ {
+    title : "German noun",
+    href : "/tools/german-noun",
+    imageURL : "images/german-nouns.png"
+ },
 ]
