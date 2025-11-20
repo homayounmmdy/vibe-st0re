@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
 
 const GRAVITY = 0.6;
 const JUMP_STRENGTH = -10;
@@ -132,7 +134,10 @@ const FlappyBird: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-sky-400 to-sky-300 p-4">
-            <div className="mb-4">
+            <div className="flex items-center gap-2 mb-4">
+                <Link to="/">
+                    <ArrowLeft className="w-8 h-8 text-white" />
+                </Link>
                 <h1 className="text-4xl font-bold text-white drop-shadow-lg">Flappy Bird</h1>
             </div>
 
