@@ -4,6 +4,8 @@ import FlagPage from "./(features)/flag/page";
 import StarDate from "./(features)/star-date/page";
 import GermanNoun from "./(features)/german-noun/page";
 import FlappyBird from "./(features)/flappy-bird/page.tsx";
+import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
+import {countriesData} from "./(features)/flag/data/countriesData.ts";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -17,22 +19,21 @@ export default function App() {
           <Route 
             path="/games/flag" 
             element={<FlagPage />}
-            // loader={flagLoader} // Optional: for data loading
           />
           <Route 
             path="/games/star-date" 
             element={<StarDate />}
-            // loader={flagLoader} // Optional: for data loading
           />
           <Route
               path="/games/flappy-bird"
               element={<FlappyBird />}
-              // loader={flagLoader} // Optional: for data loading
+          /><Route
+              path="/games/tic-tac-toe"
+              element={<TicTacToe />}
           />
-          <Route 
-            path="/tools/german-noun" 
+          <Route
+            path="/tools/german-noun"
             element={<GermanNoun />}
-            // loader={flagLoader} // Optional: for data loading
           />
         </Routes>
       </div>
