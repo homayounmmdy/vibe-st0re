@@ -9,10 +9,10 @@ const Header = ({searchQuery}: { searchQuery: string }) => {
     return (
         <Flex justify="between" align="center" className="mb-6 p-4">
             <Flex gap="2" align="center">
-                <Link to="/" title="vibe store" className="flex text-2xl gap-2 items-center text-gray-500">
+                <Link to="/" title="vibe store" className="flex  items-center">
                     <img className="w-8 h-8 rounded-xl" src="/images/logo.png" alt="logo"/>
-                    <span>
-                        Vibe Sore
+                    <span className="text-xl md:text-2xl gap-2 text-gray-500">
+                        Vibe Store
                     </span>
                 </Link>
                 <TabNav.Root>
