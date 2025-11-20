@@ -5,7 +5,6 @@ import StarDate from "./(features)/star-date/page";
 import GermanNoun from "./(features)/german-noun/page";
 import FlappyBird from "./(features)/flappy-bird/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
-import {countriesData} from "./(features)/flag/data/countriesData.ts";
 import Tetris from "./(features)/tetris/page.tsx";
 import Calculator from "./(features)/calculator/page.tsx";
 

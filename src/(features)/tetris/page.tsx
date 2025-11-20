@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import  { useState, useEffect, useCallback } from 'react';
 import {ArrowLeft} from "lucide-react";
 import {Link} from "react-router-dom";
 
@@ -120,7 +120,7 @@ export default function Tetris() {
             if (linesCleared > 0) {
                 const points = [0, 100, 300, 500, 800][linesCleared];
                 setScore(s => s + points * level);
-                setLevel(l => Math.floor(score / 1000) + 1);
+                setLevel(() => Math.floor(score / 1000) + 1);
             }
 
             setBoard(clearedBoard);

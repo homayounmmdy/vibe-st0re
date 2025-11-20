@@ -23,6 +23,7 @@ const FlappyBird: React.FC = () => {
     const [gameStarted, setGameStarted] = useState(false);
     const [gameOver, setGameOver] = useState(false);
     const [score, setScore] = useState(0);
+    // @ts-ignore
     const frameRef = useRef<number>();
 
     const jump = useCallback(() => {
@@ -104,8 +105,10 @@ const FlappyBird: React.FC = () => {
                     const pipeRight = pipe.x + PIPE_WIDTH;
 
                     // Check if bird passed pipe for scoring
+                    // @ts-ignore
                     if (pipe.x + PIPE_WIDTH < birdLeft && !pipe.scored) {
                         setScore(s => s + 1);
+                        // @ts-ignore
                         pipe.scored = true;
                     }
 
