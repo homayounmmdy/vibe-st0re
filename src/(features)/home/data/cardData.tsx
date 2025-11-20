@@ -29,6 +29,12 @@ export const cardData: cardDataType[] = [
         imageURL: "images/tic-tac-toe.png",
         type: "games"
     },
+    {
+        title: "Tetris",
+        href: "/games/tetris",
+        imageURL: "images/tetris.png",
+        type: "games"
+    },
 ]
 
 export type cardDataType = {

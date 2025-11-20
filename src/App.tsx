@@ -6,6 +6,7 @@ import GermanNoun from "./(features)/german-noun/page";
 import FlappyBird from "./(features)/flappy-bird/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
 import {countriesData} from "./(features)/flag/data/countriesData.ts";
+import Tetris from "./(features)/tetris/page.tsx";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -27,9 +28,14 @@ export default function App() {
           <Route
               path="/games/flappy-bird"
               element={<FlappyBird />}
-          /><Route
+          />
+          <Route
               path="/games/tic-tac-toe"
               element={<TicTacToe />}
+          />
+          <Route
+              path="/games/tetris"
+              element={<Tetris />}
           />
           <Route
             path="/tools/german-noun"
