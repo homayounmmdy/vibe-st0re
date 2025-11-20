@@ -1,5 +1,6 @@
 import {Flex, TabNav} from "@radix-ui/themes";
 import {Search} from "lucide-react";
+import {Link} from "react-router-dom";
 
 const Header = ({searchQuery}: { searchQuery: string }) => {
     // Normalize the search query - treat empty string as "games"
@@ -8,7 +9,12 @@ const Header = ({searchQuery}: { searchQuery: string }) => {
     return (
         <Flex justify="between" align="center" className="mb-6 p-4">
             <Flex gap="2" align="center">
-                <span className="text-2xl text-gray-500">Vibe Sore</span>
+                <Link to="/" title="vibe store" className="flex text-2xl gap-2 items-center text-gray-500">
+                    <img className="w-8 h-8 rounded-xl" src="/images/logo.png" alt="logo"/>
+                    <span>
+                        Vibe Sore
+                    </span>
+                </Link>
                 <TabNav.Root>
                     {NavItems.map((item: NavItemType, index) => (
                         <TabNav.Link
