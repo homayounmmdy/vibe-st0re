@@ -1,17 +1,27 @@
-export const cardData = [
+export const cardData : cardDataType[] = [
  {
     title : "flag game",
     href : "/games/flag",
-    imageURL : "images/flag-game.png"
+    imageURL : "images/flag-game.png",
+     type : "games"
  },
  {
     title : "star date",
     href : "/games/star-date",
-    imageURL : "images/starDate-game.png"
+    imageURL : "images/starDate-game.png",
+     type : "games"
  },
  {
     title : "German noun",
     href : "/tools/german-noun",
-    imageURL : "images/german-nouns.png"
+    imageURL : "images/german-nouns.png",
+     type : "apps"
  },
 ]
+
+export type cardDataType = {
+    title : string,
+    href: string
+    imageURL: string,
+    type : "games" | "apps";
+}
