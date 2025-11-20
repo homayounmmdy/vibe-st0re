@@ -14,7 +14,7 @@ const CardImage = ({ card }: { card: Props }) => {
           <img
             src={card.imageURL}
             alt={card.title}
-            className="bg-gray-400 object-cover aspect-video "
+            className="bg-gray-400 object-cover aspect-square "
           />
         </Inset>
         <Text as="p" size="3">

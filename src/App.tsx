@@ -7,6 +7,7 @@ import FlappyBird from "./(features)/flappy-bird/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
 import {countriesData} from "./(features)/flag/data/countriesData.ts";
 import Tetris from "./(features)/tetris/page.tsx";
+import Calculator from "./(features)/calculator/page.tsx";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -40,6 +41,10 @@ export default function App() {
           <Route
             path="/tools/german-noun"
             element={<GermanNoun />}
+          />
+          <Route
+              path="/tools/calculator"
+              element={<Calculator />}
           />
         </Routes>
       </div>
