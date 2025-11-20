@@ -17,6 +17,12 @@ export const cardData : cardDataType[] = [
     imageURL : "images/german-nouns.png",
      type : "apps"
  },
+    {
+        title : "Flappy Bird",
+        href : "/games/flappy-bird",
+        imageURL : "images/german-nouns.png",
+        type : "games"
+    },
 ]
 
 export type cardDataType = {

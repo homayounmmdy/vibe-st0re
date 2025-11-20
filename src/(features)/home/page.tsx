@@ -24,7 +24,7 @@ const HomePage = () => {
     return (
         <Container>
             <Header searchQuery={query}/>
-            <Grid columns={{ initial: "2", md: "3", lg: "4", xl: "5" }} gap="5" className="mt-2 p-4">
+            <Grid columns={{ initial: "2", md: "3", lg: "4", xl: "5" }} className="gap-2 md:gap-5 mt-2 p-4">
                 {finalData.map((card: cardDataType) => (
                     <CardImage card={card} key={card.title} />
                 ))}
