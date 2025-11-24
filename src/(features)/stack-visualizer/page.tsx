@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Plus, Minus, Eye, Trash2, List } from 'lucide-react';
+import { Plus, Minus, Eye, Trash2, List, ArrowLeft } from 'lucide-react';
+import toast, { Toaster } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 interface StackItem {
   id: number;
@@ -9,18 +11,13 @@ interface StackItem {
 export default function StackVisualizer() {
   const [stack, setStack] = useState<StackItem[]>([]);
   const [inputValue, setInputValue] = useState('');
-  const [message, setMessage] = useState('');
   const [animating, setAnimating] = useState(false);
   const [nextId, setNextId] = useState(1);
 
-  const showMessage = (msg: string) => {
-    setMessage(msg);
-    setTimeout(() => setMessage(''), 2000);
-  };
 
   const push = () => {
     if (!inputValue.trim()) {
-      showMessage('Please enter a value!');
+      toast.error('Please enter a value!');
       return;
     }
     setAnimating(true);
@@ -28,18 +25,18 @@ export default function StackVisualizer() {
     setStack([newItem, ...stack]);
     setInputValue('');
     setNextId(nextId + 1);
-    showMessage(`Pushed: ${newItem.value}`);
+    toast.success(`Pushed: ${newItem.value}`);
     setTimeout(() => setAnimating(false), 300);
   };
 
   const pop = () => {
     if (stack.length === 0) {
-      showMessage('Stack is empty!');
+      toast.error('Stack is empty!');
       return;
     }
     setAnimating(true);
     const poppedItem = stack[0];
-    showMessage(`Popped: ${poppedItem.value}`);
+    toast.success(`Popped: ${poppedItem.value}`);
     setTimeout(() => {
       setStack(stack.slice(1));
       setAnimating(false);
@@ -48,30 +45,34 @@ export default function StackVisualizer() {
 
   const peek = () => {
     if (stack.length === 0) {
-      showMessage('Stack is empty!');
+      toast.error('Stack is empty!');
       return;
     }
-    showMessage(`Top element: ${stack[0].value}`);
+    toast.success(`Top element: ${stack[0].value}`);
   };
 
   const clear = () => {
     if (stack.length === 0) {
-      showMessage('Stack is already empty!');
+      toast.error('Stack is already empty!');
       return;
     }
     setStack([]);
-    showMessage('Stack cleared!');
+    toast.success('Stack cleared!');
   };
 
   const isEmpty = () => {
-    showMessage(stack.length === 0 ? 'Stack is empty ✓' : 'Stack is not empty ✗');
+    toast.success(stack.length === 0 ? 'Stack is empty ✓' : 'Stack is not empty ✗');
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-4 md:p-8">
+      <Toaster />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-3">Stack Data Structure</h1>
+           <Link to="/">
+        <ArrowLeft className="w-8 h-8 text-gray-800" />
+        </Link>
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-3">Stack Data Structure</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             A stack follows the <span className="font-semibold text-purple-600">Last-In-First-Out (LIFO)</span> principle. 
             Think of it like a stack of plates - you can only add or remove from the top!
@@ -145,13 +146,6 @@ export default function StackVisualizer() {
               <div><span className="font-semibold">Is Empty:</span> Check if stack has elements</div>
               <div><span className="font-semibold">Clear:</span> Remove all elements</div>
             </div>
-
-            {/* Status Message */}
-            {message && (
-              <div className="mt-4 bg-blue-100 border border-blue-300 text-blue-800 px-4 py-3 rounded-lg text-center font-medium">
-                {message}
-              </div>
-            )}
 
             {/* Stack Info */}
             <div className="mt-4 flex justify-between text-sm text-gray-600">
