@@ -47,6 +47,12 @@ export const cardData: cardDataType[] = [
         imageURL: "images/character-counter.png",
         type: "apps"
     },
+    {
+        title: "StackVisualizer",
+        href: "/tools/stack-visualizer",
+        imageURL: "images/character-counter.png",
+        type: "apps"
+    },
 ]
 
 export type cardDataType = {
