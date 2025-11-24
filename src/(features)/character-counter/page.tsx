@@ -7,8 +7,9 @@ export default function CharacterCounter() {
 
   const stats = useMemo(() => {
     const characters = text.length;
-    const lines = text.split("\n").length;
-    const letters = text.replace(/[^a-zA-Z]/g, "").length;
+    const lines = text.split('\n').length;
+    const letters = text.replace(/[^a-zA-Z]/g, '').length;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
 
     // Calculate letter frequency
     const letterFreq: Record<string, number> = {};
@@ -31,13 +32,14 @@ export default function CharacterCounter() {
       characters,
       lines,
       letters,
+      words,
       letterFreq: sortedLetters,
       maxFreq,
     };
   }, [text]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2 md:p-8">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8">
           <div className="flex gap-2 items-center justify-center mb-6">
@@ -58,13 +60,18 @@ export default function CharacterCounter() {
           />
 
           {/* Statistics Cards */}
-          <div className="grid grid-cols-3 gap-2  md:gap-4 my-6">
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-2 md:p-4 text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-2  md:p-4 text-white">
               <div className="text-sm font-medium opacity-90">Characters</div>
               <div className="text-3xl font-bold mt-1">{stats.characters}</div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-2 md:p-4 text-white">
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-2  md:p-4 text-white">
+              <div className="text-sm font-medium opacity-90">Words</div>
+              <div className="text-3xl font-bold mt-1">{stats.words}</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg p-2  md:p-4 text-white">
               <div className="text-sm font-medium opacity-90">Lines</div>
               <div className="text-3xl font-bold mt-1">{stats.lines}</div>
             </div>
