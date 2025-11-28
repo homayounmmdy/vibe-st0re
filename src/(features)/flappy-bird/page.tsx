@@ -2,18 +2,45 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {Link} from "react-router-dom";
 import {ArrowLeft} from "lucide-react";
 
-const GRAVITY = 0.6;
-const JUMP_STRENGTH = -10;
 const PIPE_WIDTH = 60;
-const PIPE_GAP = 180;
-const PIPE_SPEED = 3;
-const BIRD_SIZE = 40;
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 600;
+const BIRD_SIZE = 40;
+
+type Difficulty = 'easy' | 'medium' | 'hard';
+
+interface DifficultySettings {
+    gravity: number;
+    jumpStrength: number;
+    pipeGap: number;
+    pipeSpeed: number;
+}
+
+const DIFFICULTY_SETTINGS: Record<Difficulty, DifficultySettings> = {
+    easy: {
+        gravity: 0.5,
+        jumpStrength: -9,
+        pipeGap: 220,
+        pipeSpeed: 2
+    },
+    medium: {
+        gravity: 0.6,
+        jumpStrength: -10,
+        pipeGap: 180,
+        pipeSpeed: 3
+    },
+    hard: {
+        gravity: 0.7,
+        jumpStrength: -11,
+        pipeGap: 140,
+        pipeSpeed: 4
+    }
+};
 
 interface Pipe {
     x: number;
     topHeight: number;
+    scored?: boolean;
 }
 
 const FlappyBird: React.FC = () => {
@@ -23,17 +50,20 @@ const FlappyBird: React.FC = () => {
     const [gameStarted, setGameStarted] = useState(false);
     const [gameOver, setGameOver] = useState(false);
     const [score, setScore] = useState(0);
-    // @ts-ignore
-    const frameRef = useRef<number>();
+    const [difficulty, setDifficulty] = useState<Difficulty>('medium');
+    const frameRef = useRef<number>(null);
+
+    // Get current difficulty settings
+    const currentSettings = DIFFICULTY_SETTINGS[difficulty];
 
     const jump = useCallback(() => {
         if (!gameStarted) {
             setGameStarted(true);
-            setBirdVelocity(JUMP_STRENGTH);
+            setBirdVelocity(currentSettings.jumpStrength);
         } else if (!gameOver) {
-            setBirdVelocity(JUMP_STRENGTH);
+            setBirdVelocity(currentSettings.jumpStrength);
         }
-    }, [gameStarted, gameOver]);
+    }, [gameStarted, gameOver, currentSettings.jumpStrength]);
 
     const resetGame = () => {
         setBirdY(GAME_HEIGHT / 2);
@@ -42,6 +72,11 @@ const FlappyBird: React.FC = () => {
         setGameStarted(false);
         setGameOver(false);
         setScore(0);
+    };
+
+    const changeDifficulty = (newDifficulty: Difficulty) => {
+        setDifficulty(newDifficulty);
+        resetGame();
     };
 
     useEffect(() => {
@@ -64,8 +99,8 @@ const FlappyBird: React.FC = () => {
         if (!gameStarted || gameOver) return;
 
         const gameLoop = () => {
-            // Update bird physics
-            setBirdVelocity(v => v + GRAVITY);
+            // Update bird physics using current difficulty settings
+            setBirdVelocity(v => v + currentSettings.gravity);
             setBirdY(y => {
                 const newY = y + birdVelocity;
 
@@ -78,16 +113,16 @@ const FlappyBird: React.FC = () => {
                 return newY;
             });
 
-            // Update pipes
+            // Update pipes using current difficulty settings
             setPipes(prevPipes => {
                 let newPipes = prevPipes.map(pipe => ({
                     ...pipe,
-                    x: pipe.x - PIPE_SPEED
+                    x: pipe.x - currentSettings.pipeSpeed
                 })).filter(pipe => pipe.x > -PIPE_WIDTH);
 
                 // Add new pipe
                 if (newPipes.length === 0 || newPipes[newPipes.length - 1].x < GAME_WIDTH - 250) {
-                    const topHeight = Math.random() * (GAME_HEIGHT - PIPE_GAP - 100) + 50;
+                    const topHeight = Math.random() * (GAME_HEIGHT - currentSettings.pipeGap - 100) + 50;
                     newPipes.push({
                         x: GAME_WIDTH,
                         topHeight
@@ -105,16 +140,14 @@ const FlappyBird: React.FC = () => {
                     const pipeRight = pipe.x + PIPE_WIDTH;
 
                     // Check if bird passed pipe for scoring
-                    // @ts-ignore
                     if (pipe.x + PIPE_WIDTH < birdLeft && !pipe.scored) {
                         setScore(s => s + 1);
-                        // @ts-ignore
                         pipe.scored = true;
                     }
 
                     // Check collision
                     if (birdRight > pipeLeft && birdLeft < pipeRight) {
-                        if (birdTop < pipe.topHeight || birdBottom > pipe.topHeight + PIPE_GAP) {
+                        if (birdTop < pipe.topHeight || birdBottom > pipe.topHeight + currentSettings.pipeGap) {
                             setGameOver(true);
                         }
                     }
@@ -133,7 +166,7 @@ const FlappyBird: React.FC = () => {
                 cancelAnimationFrame(frameRef.current);
             }
         };
-    }, [gameStarted, gameOver, birdVelocity, birdY]);
+    }, [gameStarted, gameOver, birdVelocity, birdY, currentSettings]);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-sky-400 to-sky-300 p-4">
@@ -142,6 +175,23 @@ const FlappyBird: React.FC = () => {
                     <ArrowLeft className="w-8 h-8 text-white" />
                 </Link>
                 <h1 className="text-4xl font-bold text-white drop-shadow-lg">Flappy Bird</h1>
+            </div>
+
+            {/* Difficulty Selector */}
+            <div className="mb-4 flex gap-2">
+                {(['easy', 'medium', 'hard'] as Difficulty[]).map((diff) => (
+                    <button
+                        key={diff}
+                        onClick={() => changeDifficulty(diff)}
+                        className={`px-4 py-2 rounded-lg font-bold transition-colors ${
+                            difficulty === diff 
+                                ? 'bg-yellow-500 text-white' 
+                                : 'bg-white text-sky-600 hover:bg-gray-100'
+                        }`}
+                    >
+                        {diff.charAt(0).toUpperCase() + diff.slice(1)}
+                    </button>
+                ))}
             </div>
 
             <div
@@ -183,9 +233,9 @@ const FlappyBird: React.FC = () => {
                             className="absolute bg-green-600 border-2 border-green-700"
                             style={{
                                 left: pipe.x,
-                                top: pipe.topHeight + PIPE_GAP,
+                                top: pipe.topHeight + currentSettings.pipeGap,
                                 width: PIPE_WIDTH,
-                                height: GAME_HEIGHT - (pipe.topHeight + PIPE_GAP)
+                                height: GAME_HEIGHT - (pipe.topHeight + currentSettings.pipeGap)
                             }}
                         >
                             <div className="absolute top-0 left-0 right-0 h-8 bg-green-500 border-b-2 border-green-700"></div>
@@ -204,6 +254,7 @@ const FlappyBird: React.FC = () => {
                         <div className="text-white text-center">
                             <p className="text-2xl font-bold mb-4">Click or Press Space</p>
                             <p className="text-lg">to Start!</p>
+                            <p className="text-sm mt-2">Difficulty: {difficulty}</p>
                         </div>
                     </div>
                 )}
@@ -214,6 +265,7 @@ const FlappyBird: React.FC = () => {
                         <div className="bg-white rounded-lg p-8 text-center shadow-xl">
                             <h2 className="text-3xl font-bold text-red-600 mb-4">Game Over!</h2>
                             <p className="text-2xl mb-2">Score: {score}</p>
+                            <p className="text-lg mb-4">Difficulty: {difficulty}</p>
                             <button
                                 onClick={resetGame}
                                 className="mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors"
@@ -227,6 +279,7 @@ const FlappyBird: React.FC = () => {
 
             <div className="mt-4 text-white text-center">
                 <p className="text-sm">Click the screen or press SPACE to flap</p>
+                <p className="text-sm">Current Difficulty: {difficulty}</p>
             </div>
         </div>
     );
