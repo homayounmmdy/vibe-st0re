@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Calculator from "./(features)/calculator/page.tsx";
 import CharacterCounter from "./(features)/character-counter/page.tsx";
 import Counter from "./(features)/counter/page.tsx";
+import CyberNinjaLevel1 from "./(features)/cyber-ninja/1/page.tsx";
 import CyberNinja from "./(features)/cyber-ninja/page.tsx";
 import FlagPage from "./(features)/flag/page";
 import FlappyBird from "./(features)/flappy-bird/page.tsx";
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/games/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/games/tetris" element={<Tetris />} />
           <Route path="/games/cyber-ninja" element={<CyberNinja />} />
+          <Route path="/games/cyber-ninja/1" element={<CyberNinjaLevel1 />} />
           <Route path="/tools/german-noun" element={<GermanNoun />} />
           <Route path="/tools/calculator" element={<Calculator />} />
           <Route
