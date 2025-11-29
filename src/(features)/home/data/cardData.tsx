@@ -1,5 +1,11 @@
 export const cardData: cardDataType[] = [
     {
+        title: "Cyber Ninja",
+        href: "/games/cyber-ninja",
+        imageURL: "images/cyber-ninja.png",
+        type: "games"
+    },
+    {
         title: "flag game",
         href: "/games/flag",
         imageURL: "images/flag-game.png",
