@@ -10,6 +10,7 @@ import Calculator from "./(features)/calculator/page.tsx";
 import CharacterCounter from "./(features)/character-counter/page.tsx";
 import StackVisualizer from "./(features)/stack-visualizer/page.tsx";
 import Counter from "./(features)/counter/page.tsx";
+import NinjaGame from "./(features)/ninja/page.tsx";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -39,6 +40,10 @@ export default function App() {
           <Route
               path="/games/tetris"
               element={<Tetris />}
+          />
+          <Route
+              path="/games/ninja"
+              element={<NinjaGame />}
           />
           <Route
             path="/tools/german-noun"
