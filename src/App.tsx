@@ -12,6 +12,7 @@ import StackVisualizer from "./(features)/stack-visualizer/page.tsx";
 import StarDate from "./(features)/star-date/page";
 import Tetris from "./(features)/tetris/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
+import CyberNinjaLevel2 from "./(features)/cyber-ninja/2/page.tsx";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/games/tetris" element={<Tetris />} />
           <Route path="/games/cyber-ninja" element={<CyberNinja />} />
           <Route path="/games/cyber-ninja/1" element={<CyberNinjaLevel1 />} />
+          <Route path="/games/cyber-ninja/2" element={<CyberNinjaLevel2 />} />
           <Route path="/tools/german-noun" element={<GermanNoun />} />
           <Route path="/tools/calculator" element={<Calculator />} />
           <Route
