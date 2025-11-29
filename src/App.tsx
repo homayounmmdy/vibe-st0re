@@ -9,6 +9,7 @@ import Tetris from "./(features)/tetris/page.tsx";
 import Calculator from "./(features)/calculator/page.tsx";
 import CharacterCounter from "./(features)/character-counter/page.tsx";
 import StackVisualizer from "./(features)/stack-visualizer/page.tsx";
+import Counter from "./(features)/counter/page.tsx";
 
 // Optional: If you want to use loaders (data loading)
 // import { loader as flagLoader } from "./(features)/flag/loader";
@@ -54,6 +55,10 @@ export default function App() {
           <Route
               path="/tools/stack-visualizer"
               element={<StackVisualizer />}
+          />
+           <Route
+              path="/tools/counter"
+              element={<Counter />}
           />
         </Routes>
       </div>
