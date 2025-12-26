@@ -6,12 +6,12 @@ import CyberNinja from "./(features)/cyber-ninja/page.tsx";
 import FlagPage from "./(features)/flag/page";
 import FlappyBird from "./(features)/flappy-bird/page.tsx";
 import GermanNoun from "./(features)/german-noun/page";
-import HomePage from "./(features)/home/page";
 import StackVisualizer from "./(features)/stack-visualizer/page.tsx";
 import StarDate from "./(features)/star-date/page";
 import TaskPrioritize from "./(features)/task-prioritize/page.tsx";
 import Tetris from "./(features)/tetris/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
+import HomePage from "./(pages)/home/page.tsx";
 
 export default function App() {
   return (
