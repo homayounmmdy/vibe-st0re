@@ -4,6 +4,7 @@ import {cardData, type cardDataType} from "./data/cardData";
 import Header from "../../components/Header.tsx";
 import {useLocation} from "react-router-dom";
 import {useState, useEffect} from "react";
+import Footer from "../../components/Footer.tsx";
 
 const HomePage = () => {
     const { search } = useLocation();
@@ -29,6 +30,7 @@ const HomePage = () => {
                     <CardImage card={card} key={card.title} />
                 ))}
             </Grid>
+            <Footer />
         </Container>
     );
 };
