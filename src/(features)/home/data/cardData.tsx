@@ -65,6 +65,12 @@ export const cardData: cardDataType[] = [
         imageURL: "images/counter.png",
         type: "apps"
     },
+     {
+        title: "Task Prioritize",
+        href: "/tools/task-prioritize",
+        imageURL: "images/task-prioritize.png",
+        type: "apps"
+    },
 ]
 
 export type cardDataType = {

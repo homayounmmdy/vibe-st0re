@@ -9,6 +9,7 @@ import GermanNoun from "./(features)/german-noun/page";
 import HomePage from "./(features)/home/page";
 import StackVisualizer from "./(features)/stack-visualizer/page.tsx";
 import StarDate from "./(features)/star-date/page";
+import TaskPrioritize from "./(features)/task-prioritize/page.tsx";
 import Tetris from "./(features)/tetris/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
 
@@ -32,6 +33,7 @@ export default function App() {
           />
           <Route path="/tools/stack-visualizer" element={<StackVisualizer />} />
           <Route path="/tools/counter" element={<Counter />} />
+          <Route path="/tools/task-prioritize" element={<TaskPrioritize />} />
         </Routes>
       </div>
     </Router>
