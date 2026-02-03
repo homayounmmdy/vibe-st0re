@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Testimonial from "./components/Testimonial";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
+import Footer from "../components/Footer";
 
 const LadingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LadingPage = () => {
       <Testimonial />
       <FAQ />
       <CTA />
+      <Footer />
     </div>
   );
 };
