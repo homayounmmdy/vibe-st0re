@@ -13,6 +13,7 @@ import Tetris from "./(features)/tetris/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
 import HomePage from "./(pages)/home/page.tsx";
 import Snake from "./(features)/snake/page.tsx";
+import LadingPage from "./(pages)/landing/page.tsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/landing" element={<LadingPage />} />
           <Route path="/games/flag" element={<FlagPage />} />
           <Route path="/games/star-date" element={<StarDate />} />
           <Route path="/games/flappy-bird" element={<FlappyBird />} />
