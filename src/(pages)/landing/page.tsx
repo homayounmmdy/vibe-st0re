@@ -1,10 +1,12 @@
 "use client";
-import Hero from "./Hero";
+import ProjectSlider from "./components/ProjectShowcase";
+import Hero from "./components/Hero";
 
 const LadingPage = () => {
   return (
     <div>
       <Hero />
+      <ProjectSlider />
     </div>
   );
 };
