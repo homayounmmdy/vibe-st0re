@@ -1,14 +1,16 @@
 "use client";
-import ProjectSlider from "./components/ProjectShowcase";
-import Hero from "./components/Hero";
-import Testimonial from "./components/Testimonial";
-import FAQ from "./components/FAQ";
+import Header from "./components/Header";
 import CTA from "./components/CTA";
-import Footer from "../components/Footer";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import ProjectSlider from "./components/ProjectShowcase";
+import Testimonial from "./components/Testimonial";
 
 const LadingPage = () => {
   return (
     <div>
+        <Header/>
       <Hero />
       <ProjectSlider />
       <Testimonial />
