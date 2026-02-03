@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
           <div className="lg:pl-10 pt-6 animate-fade-up delay-150">
             <p className="text-lg text-gray-400 max-w-md leading-relaxed">
               Games, tools, and small experiments built by following curiosity
-              instead of over-planning. Some are polished, some are messy — all
+              instead of over-planning. Some are polished, some are messy. All
               of them are shipped and learned from.
             </p>
 
