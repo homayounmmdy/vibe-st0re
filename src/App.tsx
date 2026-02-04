@@ -12,7 +12,6 @@ import TaskPrioritize from "./(features)/task-prioritize/page.tsx";
 import Tetris from "./(features)/tetris/page.tsx";
 import TicTacToe from "./(features)/tic-tac-toe/page.tsx";
 import HomePage from "./(pages)/home/page.tsx";
-import Snake from "./(features)/snake/page.tsx";
 import LadingPage from "./(pages)/landing/page.tsx";
 
 export default function App() {
@@ -28,7 +27,6 @@ export default function App() {
           <Route path="/games/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/games/tetris" element={<Tetris />} />
           <Route path="/games/cyber-ninja" element={<CyberNinja />} />
-          <Route path="/games/snake" element={<Snake />} />
           <Route path="/tools/german-noun" element={<GermanNoun />} />
           <Route path="/tools/calculator" element={<Calculator />} />
           <Route

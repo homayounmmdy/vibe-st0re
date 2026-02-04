@@ -74,7 +74,6 @@ const Hero: React.FC = () => {
             <p className="text-purple-200">&gt; Flag Game</p>
             <p className="text-purple-200">&gt; Star Date</p>
             <p className="text-purple-200">&gt; Flappy Bird</p>
-            <p className="text-purple-200">&gt; Snake</p>
             <p className="text-purple-200">&gt; Tic Tac Toe</p>
             <p className="text-purple-200">&gt; Tetris</p>
             <br />

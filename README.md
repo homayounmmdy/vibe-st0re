@@ -12,7 +12,7 @@ Every project here was shipped early, learned from deeply, and shared openly. So
 - **Cyber Ninja** – A retro arcade-style action game  
 - **Flag Game** – Test your world geography knowledge  
 - **Star Date** – Space-themed date converter  
-- **Flappy Bird**, **Snake**, **Tic Tac Toe**, **Tetris** – Classic recreations with modern flair  
+- **Flappy Bird**, **Tic Tac Toe**, **Tetris** – Classic recreations with modern flair  
 
 ### 🛠️ Tools & Apps
 - **German Noun Trainer** – Learn German noun genders interactively  

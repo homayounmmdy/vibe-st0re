@@ -30,12 +30,6 @@ export const cardData: cardDataType[] = [
         type: "games"
     },
     {
-        title: "Snake",
-        href: "/games/snake",
-        imageURL: "images/snake.png",
-        type: "games"
-    },
-    {
         title: "Tic Tac Toe",
         href: "/games/tic-tac-toe",
         imageURL: "images/tic-tac-toe.png",
